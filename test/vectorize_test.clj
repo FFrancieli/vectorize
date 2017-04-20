@@ -13,4 +13,10 @@
     (vectorize/subtract (vector 1 2 3) (vector 4 5 6)) => (vector -3 -3 -3))
 
   (fact "subtract multiple vectors")
-    (vectorize/subtract (vector 10 9) (vector 0 2) (vector 6 1)) => (vector 4 6))
+    (vectorize/subtract (vector 10 9) (vector 0 2) (vector 6 1)) => (vector 4 6)
+
+  (fact "verify vector equality"
+    (vectorize/equals? (vector 1 2) (vector 1 2)) => true)
+
+  (fact "vectors are not equals"
+    (vectorize/equals? (vector 1 2) (vector 4 9)) => false))
