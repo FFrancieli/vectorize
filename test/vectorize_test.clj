@@ -19,4 +19,7 @@
     (vectorize/equals? (vector 1 2) (vector 1 2)) => true)
 
   (fact "vectors are not equals"
-    (vectorize/equals? (vector 1 2) (vector 4 9)) => false))
+    (vectorize/equals? (vector 1 2) (vector 4 9)) => false)
+
+  (fact "calculates length"
+    (vectorize/length (vector 3 4)) => 5.0))
